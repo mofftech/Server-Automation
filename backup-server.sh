@@ -76,7 +76,7 @@ clearbackups()
   fi
 }
 
-[ `whoami` != "root" ] && echo "You must be root or run as sudo." && exit 0
+[ $(whoami) != "root" ] && echo "You must be root or run as sudo." && exit 0
 
 [ -z $remoteserver ] && echo "Unable to determine remote server. scp will fail later."
 echo -e "Backup destination server: $remoteserver.\n"
