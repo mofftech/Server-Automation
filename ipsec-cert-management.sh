@@ -2,7 +2,11 @@
 #
 # Version:  2016072800
 #
-# Certificate creation and reversion.
+# https://github.com/mofftech/Server-Automation
+# http://www.moff.tech/
+# 
+# Certificate creation and revocation.
+# Designed for handling certs for IPsec.
 
 [[ -z $1 ]] && echo "Specify hostname." && exit 0
 
@@ -66,7 +70,7 @@ openssl ca -in $KEYR -days 3650 -out $KEYC -notext -cert $CACRT -keyfile $CAKEY
 openssl pkcs12 -export -inkey $KEYP -in $KEYC -certfile $CACRT -out $KEYW -name "$i"
 #
 #
-echo "Import $KEYW to your Windows client."
+echo "Import $KEYW to your IPsec client."
 #
 chmod 400 $CERTDIR/*
 ls -la $CERTDIR
