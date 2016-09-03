@@ -8,6 +8,11 @@
 # Auto renewal of lentsencrypt certs and handle exim special permissions.
 # Restart exim4, dovecot and apache2. Designed to be cron friendly.
 # Warning! Exim, Dovecot and Apache2 are reloaded at the end.
+#
+# Add to crontab similar to the following:
+# 1       0       2       MAR,JUN,SEP,DEC *       some_path/letsencrypt-handle-certs.sh
+#
+# Be aware that the next certificate will expire on the preceding day
 
 ###                                                 ###
 ### Below, set LEDOMAIN,LEINSTALLPATH, check others ###
