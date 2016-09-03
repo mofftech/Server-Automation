@@ -9,6 +9,10 @@ Backup critical server directories (Debian focussed) to a remote server with scp
 
 Create or revoke certificates for IPsec.
 
+## letsencrypt-handle-certs.sh
+
+Renew letsencrypt certificates. Then update exim4, dovecot and apache2 with the new certs.
+
 ## scan_zip.sh
 
 Script called by Exim to to inspect the contents of zip attachments.
