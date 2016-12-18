@@ -5,7 +5,7 @@
 # http://www.moff.tech/
 # https://github.com/mofftech/Server-Automation
 #
-# Version:  2016071900
+# Version:  2016121800
 # Requires: logger, grep, unzip, ls
 #
 # First insert this stanza into conf.d/acl/40_exim4-config_check_data:
@@ -25,7 +25,7 @@ cmd_grep='/bin/grep'
 cmd_unzip='/usr/bin/unzip'
 cmd_ls='/bin/ls'
 DIRSCAN="/var/spool/exim4/scan/$ID"
-UNSAFE='\.exe$|\.com$|\.js$|\.cmd$|\.pif$|\.bat$|\.btm$|\.cpl$|\.dll$|\.lnk$|\.msi$|\.prf$|\.zip$|\.reg$|\.scr$|\.vbs$|\.rar$|\.url$|\.wsf$|\.docm$'
+UNSAFE='\.exe$|\.com$|\.js$|\.cmd$|\.pif$|\.bat$|\.btm$|\.cpl$|\.dll$|\.lnk$|\.msi$|\.prf$|\.zip$|\.reg$|\.scr$|\.vbs$|\.rar$|\.url$|\.wsf$|\.docm$|\.hta$|\.jse$'
 
 # Nothing under here should need to be changed
 
