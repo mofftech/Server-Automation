@@ -25,7 +25,7 @@ cmd_grep='/bin/grep'
 cmd_unzip='/usr/bin/unzip'
 cmd_ls='/bin/ls'
 DIRSCAN="/var/spool/exim4/scan/$ID"
-UNSAFE='\.exe$|\.com$|\.js$|\.cmd$|\.pif$|\.bat$|\.btm$|\.cpl$|\.dll$|\.lnk$|\.msi$|\.prf$|\.zip$|\.7z$|\.gz$|\.reg$|\.scr$|\.vbs$|\.rar$|\.url$|\.wsf$|\.docm$|\.hta$|\.jse$'
+UNSAFE='\.exe$|\.com$|\.js$|\.cmd$|\.pif$|\.bat$|\.btm$|\.cpl$|\.dll$|\.lnk$|\.msi$|\.prf$|\.zip$|\.7z$|\.gz$|\.reg$|\.scr$|\.vbs$|\.rar$|\.url$|\.wsf$|\.docm|\.hta$|\.jse$|\.ace$|\.dzip$'
 
 # Nothing under here should need to be changed
 
