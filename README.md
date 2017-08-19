@@ -11,7 +11,9 @@ Create or revoke certificates for IPsec.
 
 ## letsencrypt-handle-certs.sh
 
-Renew letsencrypt certificates. Then update exim4, dovecot and apache2 with the new certs.
+Let's Encrypt automates the process of getting a cert and installing it to apache easy. The complication is when you want to reuse that certificate for mail handling.
+
+This script automates the process of renewing the letsencrypt certificate for apache2 and additionally updating exim4 and dovecot with the new certs.
 
 ## scan_zip.sh
 
