@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-# Version: 2016090300
+# Version: 2017081900
 # 
 # https://github.com/mofftech/Server-Automation
 # http://www.moff.tech/
@@ -10,9 +10,7 @@
 # Warning! Exim, Dovecot and Apache2 are reloaded at the end.
 #
 # Add to crontab similar to the following:
-# 1       0       2       MAR,JUN,SEP,DEC *       some_path/letsencrypt-handle-certs.sh
-#
-# Be aware that the next certificate will expire on the preceding day
+# *    *    */3    *    * some_path/letsencrypt-handle-certs.sh
 
 ###                                                 ###
 ### Below, set LEDOMAIN,LEINSTALLPATH, check others ###
@@ -23,7 +21,7 @@ LEDOMAIN=""                           # The domain in the LEBASE path
 LELIVEDIR="$LEBASE/live/$LEDOMAIN"    # Your LE live certs dir
 LEARCHDIR="$LEBASE/archive/$LEDOMAIN" # Your LE archive certs dir
 LEFILES="fullchain.pem privkey.pem"   # The names of the LE certs
-LEINSTALLPATH="some_path/letsencrypt" # Where you run the LE cmds (like "renew) from
+LEINSTALLPATH="some_path/letsencrypt" # Where you run the LE cmds (like "renew")
 EXIMDIR="/etc/exim4"                  # Exim config path
 EXIMPERMS="root.Debian-exim"          # user.group of Exim certs
 
