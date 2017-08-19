@@ -90,9 +90,15 @@ if [ "$?" != "0" ]; then
 fi
 
 echo -e "$LEOUTPUT"
+
+if [ ! -z "$(echo -e "$LEOUTPUT" | $cmd_grep 'not due for renewal yet')" ]; then
+   [[ ! -z "$DEBUG" ]] && echo -e "\nHmm, looks like letsencrypt did nothing. Exiting."
+   exit 0
+fi
+
 if [ ! -z "$(echo -e "$LEOUTPUT" | $cmd_grep 'No renewals were attempted')" ]; then
    echo -e "\nHmm, looks like letsencrypt did nothing. Exiting."
-   exit 1
+   exit 0
 fi
 
 [[ ! -z "$DEBUG" ]] && showledirs
